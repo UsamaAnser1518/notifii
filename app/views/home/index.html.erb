@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation bar -->
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-xl font-semibold">Logo</a>
+                <ul class="flex space-x-4">
+                    <li><%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "font-bold hover:text-gray-300" %></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="bg-gray-900 text-white py-20 h-screen">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-semibold">Welcome to the SMS Notification App</h1>
+            <p class="mt-4 text-lg">Please check the <%= link_to "README.md", readme_preview_path %> for Details</p>
+        </div>
+    </section>
+</body>
+
+</html>
